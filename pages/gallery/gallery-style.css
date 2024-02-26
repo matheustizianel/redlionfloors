@@ -83,8 +83,8 @@ main .container {
   scroll-behavior: smooth;
   scrollbar-color: #ff0a00 transparent;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2.5rem;
 }
 
 .gallery-item img {
@@ -113,6 +113,11 @@ footer p {
     flex-direction: column;
     gap: 2rem;
   }
+
+  .gallery .gallery-box {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -126,5 +131,16 @@ footer p {
 
   .gallery h1 {
     font-size: 3rem;
+  }
+
+  .gallery .gallery-box {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery .gallery-box {
+    grid-template-columns: repeat(5, 1fr) !important;
   }
 }

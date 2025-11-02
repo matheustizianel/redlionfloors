@@ -1529,5 +1529,40 @@
     <footer>
       <p>All rights reserved to Red Lion Floors &copy;</p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".gallery-item img");
+
+        // Step 1: Convert src to data-src
+        images.forEach(img => {
+          if (img.src) {
+            img.dataset.src = img.src;
+            img.removeAttribute("src");
+            img.classList.add("lazy");
+          }
+        });
+
+        // Step 2: Observe and load as they enter viewport
+        const observer = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.onload = () => img.classList.add("loaded");
+                observer.unobserve(img);
+              }
+            });
+          },
+          {
+            rootMargin: "300px", // preload before image becomes visible
+            threshold: 0.1
+          }
+        );
+
+        images.forEach(img => observer.observe(img));
+      });
+    </script>
   </body>
 </html>

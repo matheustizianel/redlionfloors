@@ -60,13 +60,12 @@ nav ul li a {
 
 #banner {
   width: 100%;
-  height: calc(100vh - 6rem);
-  max-width: 3440px;
+  height: 100vh;
   background-image: url(./assets/banner.png);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; /* efeito parallax no desktop */
 }
 
 #banner img {
@@ -245,6 +244,13 @@ footer p {
     flex-direction: column;
     gap: 2rem;
   }
+
+  #banner {
+    height: 40vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -275,6 +281,13 @@ footer p {
   #top-projects h2 {
     font-size: 3rem;
     margin-bottom: 4rem;
+  }
+
+  #banner {
+    height: 50vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
   }
 }
 
@@ -310,6 +323,13 @@ footer p {
   #social-media ul li:first-child,
   #social-media ul li:last-child {
     border-radius: 8px;
+  }
+
+  #banner {
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll; /* evita bug no mobile */
   }
 }
 

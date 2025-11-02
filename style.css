@@ -63,9 +63,9 @@ nav ul li a {
   height: 100vh;
   background-image: url(./assets/banner.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
-  background-attachment: fixed; /* efeito parallax no desktop */
+  background-attachment: fixed;
 }
 
 #banner img {

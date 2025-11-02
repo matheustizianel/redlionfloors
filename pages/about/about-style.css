@@ -5,8 +5,8 @@
 }
 
 :root {
-  --bg-light: #fffafa;
-  --bg-dark: #ebf5c2;
+  --bg-light: rgba(247, 247, 247, 1);
+  --bg-dark: linear-gradient(135deg,rgba(172, 172, 172, 1) 0%, rgba(247, 247, 247, 1) 100%);
 
   font-size: 62.5%;
 }
@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: #ebf5c2;
+  background-color: rgba(247, 247, 247, 1);
   font-size: 1.6rem;
 }
 
@@ -56,7 +56,7 @@ nav ul li a {
   font-size: 1.8rem;
   text-decoration: none;
   font-weight: bold;
-  color: #ff0a00;
+  color: #5c0c19;
 }
 
 main .container {
@@ -89,7 +89,7 @@ main .container {
 }
 
 .vision-info h1 span {
-  color: #ff0a00;
+  color: #5c0c19;
 }
 
 .vision-info p {
